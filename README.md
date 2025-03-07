@@ -57,4 +57,22 @@ app.controller('myCtrl', function($scope) {
 
 </body>
 </html>
+---------------
+AngularJS Expressions
+AngularJS expressions are written inside double braces: {{ expression }}.
+
+AngularJS will "output" data exactly where the expression is written:
+
+AngularJS Example
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+  <p>My first expression: {{ 5 + 5 }}</p>
+</div>
+
+</body>
+</html>
 
