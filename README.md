@@ -75,4 +75,46 @@ AngularJS Example
 
 </body>
 </html>
+---------------------------------------------------
+AngularJS Modules
+An AngularJS module defines an application.
 
+The module is a container for the different parts of an application.
+
+The module is a container for the application controllers.
+
+Controllers always belong to a module.
+
+Creating a Module
+A module is created by using the AngularJS function angular.module
+----------------------------------------------
+Modules and Controllers in Files
+It is common in AngularJS applications to put the module and the controllers in JavaScript files.
+
+In this example, "myApp.js" contains an application module definition, while "myCtrl.js" contains the controller:
+html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
+</div>
+
+<script src="myApp.js"></script>
+<script src="myCtrl.js"></script>
+
+</body>
+</html>
+----------------------
+myApp.js
+var app = angular.module("myApp", []);
+------------------------------
+The [] parameter in the module definition can be used to define dependent modules.
+
+Without the [] parameter, you are not creating a new module, but retrieving an existing one.
+
+myCtrl.js
+app.controller("myCtrl", function($scope) {
+  $scope.firstName = "John";
+  $scope.lastName= "Doe";
+});
