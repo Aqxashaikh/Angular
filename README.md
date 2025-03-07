@@ -23,3 +23,7 @@ The ng-bind directive binds application data to the HTML view.
 </div>
 </body>
 </html>
+-------------
+<p ng-bind="name"></p>
+<p>{{name}}</p>
+
