@@ -26,4 +26,8 @@ The ng-bind directive binds application data to the HTML view.
 -------------
 <p ng-bind="name"></p>
 <p>{{name}}</p>
+-----------------------------
+AngularJS modules define applications:
 
+AngularJS Module
+var app = angular.module('myApp', []);
